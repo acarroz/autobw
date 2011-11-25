@@ -1,0 +1,10 @@
+autobw
+
+Description
+This small script detects the number of Windows & Samba computers on the LAN and adjusts the maximum upload / download bandwidth configured in deluge. The host is excluded from the count.
+
+Requirements
+A recent version of deluge which includes deluge-console. It also needs smbtree (usually provided by the smbclient package in Debian/Ubunt/etc.)
+
+Usage
+autobw is meant to be run from a relatively frequent cron job (mine is set for every 5 minutes) and you need to set the variables maxdownspeed, maxupspeed for the 'high' setting and regdownspeed, regupspeed for the 'ĺow' one.

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 maxdownspeed="90.0"
-maxupspeed="20.0"
+maxupspeed="30.0"
 
 regdownspeed="60.0"
 regupspeed="15.0"
