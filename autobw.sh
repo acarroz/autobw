@@ -1,6 +1,6 @@
 #!/bin/bash
 
-logfile=$(echo "$0.log" | sed "s/.sh//g" | sed "s/.\///g")
+logfile=$(echo "$0.log" | sed "s/.sh//g")
 
 maxdownspeed="90.0"
 maxupspeed="30.0"
@@ -17,13 +17,13 @@ if [ $wincount -gt 0 ]; then
     deluge-console "config --set max_download_speed $regdownspeed"
     deluge-console "config --set max_upload_speed $regupspeed"
 
-    echo "$now	REG	$wincount hosts found" >> $logfile
+    echo "$now	*REG*	$wincount hosts found" >> $logfile
   fi
 else
   if [ $currdownspeed != $maxdownspeed ]; then
     deluge-console "config --set max_download_speed $maxdownspeed"
     deluge-console "config --set max_upload_speed $maxupspeed"
 
-    echo "$now	MAX	$wincount hosts found" >> $logfile
+    echo "$now	*MAX*	$wincount hosts found" >> $logfile
   fi
 fi
