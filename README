@@ -9,6 +9,5 @@ A recent version of deluge which includes deluge-console. It also needs smbtree 
 Usage
 autobw is meant to be run from a relatively frequent cron job (mine is set for every 5 minutes) and you need to set the variables maxdownspeed, maxupspeed for the 'high' setting and regdownspeed, regupspeed for the 'low' one.
 
-
 Limitations
 Since it uses smbtree to detect other machines, it means smartphones and tables will not be detected (keep this in mind when determining your high setting) also, the Windows / Samba machine has to be visible on the network.
